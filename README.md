@@ -7,9 +7,9 @@
 - RxSwift/Rx-Cocoa for reactive programming.
  
  
-***Functional Description:***
+**Functional Description:**
 
-Login Screen
+**Login Screen**
 - Form contains two text fields: one is email and other one is password
 - Email must be valid email address
 - Password size limitation between 8 - 15 characters

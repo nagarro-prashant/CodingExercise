@@ -26,5 +26,5 @@
 - *Swipe to delete* action used to delete the post from favorites.
  
 **References for API:**
-Base Url: *https://jsonplaceholder.typicode.com*
-Posts: */posts*
+- Base Url: *https://jsonplaceholder.typicode.com*
+- Posts: */posts*

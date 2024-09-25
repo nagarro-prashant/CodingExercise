@@ -32,6 +32,7 @@
 		486D1FC44550B2BADEB3DF6B /* Pods_CodingExercise_CodingExerciseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943AD3A1442F8895375A788D /* Pods_CodingExercise_CodingExerciseUITests.framework */; };
 		4872E37B2CA457400036B22F /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872E37A2CA457400036B22F /* LoginViewRouter.swift */; };
 		4872E37D2CA459690036B22F /* PostsViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872E37C2CA459690036B22F /* PostsViewRouter.swift */; };
+		4872E3812CA472810036B22F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872E3802CA472810036B22F /* PostCell.swift */; };
 		48976B282CA29501003CD259 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48976B272CA294FD003CD259 /* UserModel.swift */; };
 		48976B2A2CA2956B003CD259 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48976B292CA2956B003CD259 /* LoginViewModel.swift */; };
 		48976B2D2CA295CF003CD259 /* String+validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48976B2C2CA295B7003CD259 /* String+validation.swift */; };
@@ -96,6 +97,7 @@
 		4828D4252C9B0FDC00D18DC7 /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
 		4872E37A2CA457400036B22F /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
 		4872E37C2CA459690036B22F /* PostsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewRouter.swift; sourceTree = "<group>"; };
+		4872E3802CA472810036B22F /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		48976B272CA294FD003CD259 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		48976B292CA2956B003CD259 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		48976B2C2CA295B7003CD259 /* String+validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+validation.swift"; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				48976B2E2CA29673003CD259 /* LoginViewController.swift */,
 				48FE84852C920EC100D6D34D /* PostsViewController.swift */,
 				48976B3E2CA30126003CD259 /* FavoritesViewController.swift */,
+				4872E3802CA472810036B22F /* PostCell.swift */,
 				48FE84872C920EC100D6D34D /* Main.storyboard */,
 			);
 			path = View;
@@ -741,6 +744,7 @@
 				4828D3F62C9872D200D18DC7 /* PostsRemoteRepo.swift in Sources */,
 				4828D41B2C9A0A6C00D18DC7 /* APIClientMock.swift in Sources */,
 				4872E37D2CA459690036B22F /* PostsViewRouter.swift in Sources */,
+				4872E3812CA472810036B22F /* PostCell.swift in Sources */,
 				48976B282CA29501003CD259 /* UserModel.swift in Sources */,
 				48976B2F2CA29673003CD259 /* LoginViewController.swift in Sources */,
 				4872E37B2CA457400036B22F /* LoginViewRouter.swift in Sources */,

@@ -46,8 +46,9 @@ class PostsViewController: UITableViewController {
     private func setupBindings() {
         viewModel.posts
             .bind(to: tableView.rx.items(cellIdentifier: "PostCell")) { row, post, cell in
-                cell.textLabel?.text = post.title
-                cell.accessoryType = post.isFavorite ? .checkmark : .none
+                (cell as? PostCell)?.titleLabel.text = post.title
+                (cell as? PostCell)?.bodyLabel.text = post.body
+                (cell as? PostCell)?.favoriteImageView.isHidden = !post.isFavorite
             }
             .disposed(by: bag)
 

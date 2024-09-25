@@ -1,10 +1,10 @@
 # CodingExercise
 **Specifications**
-- Language Swift.
+-  Language: Swift
 -  Design pattern: MVVM
 -  Realm-Swift for DB.
-- Alamofire for network calls.
-- RxSwift/Rx-Cocoa for reactive programming.
+-  Alamofire for network calls.
+-  RxSwift/Rx-Cocoa for reactive programming.
  
  
 **Functional Description:**

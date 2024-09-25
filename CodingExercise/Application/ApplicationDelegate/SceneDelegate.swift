@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             tabBarController.selectedIndex = 0
             if let nav = tabBarController.viewControllers?.first as? UINavigationController, let postsView = nav.topViewController  as? PostsViewController {
                 print("posts NAv")
-                postsView.assignDependencies(viewModel: DependencyManager.postsDI())
+                postsView.assignDependencies(viewModel: DependencyManager.postsDI(), router: PostsViewRouter())
             }
             if let nav = tabBarController.viewControllers?.last as? UINavigationController, let favView = nav.topViewController  as? FavoritesViewController {
                 print(" fav NAv")
@@ -49,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Assuming you have a TabBarController set up in the storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let loginView = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController  {
-            loginView.assignDependencies(viewModel: DependencyManager.loginDI())
+            loginView.assignDependencies(viewModel: DependencyManager.loginDI(), router: LoginViewRouter())
             self.window?.rootViewController = loginView
             self.window?.makeKeyAndVisible()
         }

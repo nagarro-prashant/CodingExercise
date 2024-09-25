@@ -12,16 +12,22 @@ import RxCocoa
 class PostsViewController: UITableViewController {
 
     private var viewModel: PostsViewModel!
+    private var router: PostsViewRouter!
+    
     let bag = DisposeBag()
     
-    func assignDependencies(viewModel: PostsViewModel) {
+    func assignDependencies(viewModel: PostsViewModel, router: PostsViewRouter) {
         self.viewModel = viewModel
+        self.router = router
     }
     
     override func viewDidLoad() {
+        
         self.title = "Posts"
+        
         setupTableview()
         setupBindings()
+        
         // Add logout button
         let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
         navigationItem.rightBarButtonItem = logoutButton
@@ -29,7 +35,7 @@ class PostsViewController: UITableViewController {
     
     @objc func logout() {
         self.viewModel.logout()
-        self.showLoginScreen()
+        self.router.showLoginScreen()
     }
     
     private func setupTableview() {
@@ -60,24 +66,9 @@ class PostsViewController: UITableViewController {
         viewModel.fetchLocal()
     }
     
-    func showLoginScreen() {
-        print("--- Inside showLoginScreen after logout")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let loginView = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController  {
-            loginView.assignDependencies(viewModel: DependencyManager.loginDI())
-            // Set the new root view controller with an animation
-            if let window = UIApplication.shared.keyWindow {
-                window.rootViewController = loginView
-                window.makeKeyAndVisible()
-                // Optional: Add a transition animation
-                UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
-            }
-        }
-    }
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
-        print("PostsViewController deinitialized")
+        print("💀💀💀💀 PostsViewController deinitialized")
     }
 
 }

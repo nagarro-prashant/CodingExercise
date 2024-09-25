@@ -46,6 +46,6 @@ class FavoritesViewController: UIViewController {
     }
     
     deinit {
-        print("FavoritesViewController deinitialized")
+        print("💀💀💀💀 FavoritesViewController deinitialized")
     }
 }

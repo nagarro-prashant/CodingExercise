@@ -12,14 +12,17 @@ import RxCocoa
 
 class LoginViewController: UIViewController {
     private var viewModel: LoginViewModel!
+    private var router: LoginViewRouter!
+    
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
-    func assignDependencies(viewModel: LoginViewModel) {
+    func assignDependencies(viewModel: LoginViewModel, router: LoginViewRouter) {
         self.viewModel = viewModel
+        self.router = router
     }
 
     override func viewDidLoad() {
@@ -47,33 +50,12 @@ class LoginViewController: UIViewController {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: {[weak self] _ in
                 // Show Posts
-                self?.showPosts()
+                self?.router.showPosts()
             })
             .disposed(by: disposeBag)
     }
     
-    func showPosts() {
-        // Assuming you have a TabBarController set up in the storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let tabBarController = storyboard.instantiateViewController(withIdentifier: "PostsTabbarController") as? UITabBarController {
-            tabBarController.selectedIndex = 0
-            if let nav = tabBarController.viewControllers?.first as? UINavigationController, let postsView = nav.topViewController  as? PostsViewController {
-                postsView.assignDependencies(viewModel: DependencyManager.postsDI())
-            }
-            if let nav = tabBarController.viewControllers?.last as? UINavigationController, let favView = nav.topViewController  as? FavoritesViewController {
-                favView.assignDependencies(viewModel: DependencyManager.favoritesDI())
-            }
-            // Set the new root view controller with an animation
-            if let window = UIApplication.shared.keyWindow {
-                window.rootViewController = tabBarController
-                window.makeKeyAndVisible()
-                // Optional: Add a transition animation
-                UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil, completion: nil)
-            }
-        }
-    }
-    
     deinit {
-        print("LoginViewController deinitialized")
+        print("💀💀💀💀 LoginViewController deinitialized")
     }
 }

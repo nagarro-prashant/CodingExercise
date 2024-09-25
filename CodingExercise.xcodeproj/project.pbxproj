@@ -30,6 +30,8 @@
 		4828D4282C9B25E700D18DC7 /* Posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 4828D4102C99F67700D18DC7 /* Posts.json */; };
 		48384A6D2CA30DF30057148A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE84872C920EC100D6D34D /* Main.storyboard */; };
 		486D1FC44550B2BADEB3DF6B /* Pods_CodingExercise_CodingExerciseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943AD3A1442F8895375A788D /* Pods_CodingExercise_CodingExerciseUITests.framework */; };
+		4872E37B2CA457400036B22F /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872E37A2CA457400036B22F /* LoginViewRouter.swift */; };
+		4872E37D2CA459690036B22F /* PostsViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4872E37C2CA459690036B22F /* PostsViewRouter.swift */; };
 		48976B282CA29501003CD259 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48976B272CA294FD003CD259 /* UserModel.swift */; };
 		48976B2A2CA2956B003CD259 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48976B292CA2956B003CD259 /* LoginViewModel.swift */; };
 		48976B2D2CA295CF003CD259 /* String+validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48976B2C2CA295B7003CD259 /* String+validation.swift */; };
@@ -92,6 +94,8 @@
 		4828D41A2C9A0A6C00D18DC7 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		4828D4232C9ADC8000D18DC7 /* DatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseClient.swift; sourceTree = "<group>"; };
 		4828D4252C9B0FDC00D18DC7 /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
+		4872E37A2CA457400036B22F /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
+		4872E37C2CA459690036B22F /* PostsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewRouter.swift; sourceTree = "<group>"; };
 		48976B272CA294FD003CD259 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		48976B292CA2956B003CD259 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		48976B2C2CA295B7003CD259 /* String+validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+validation.swift"; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			children = (
 				4828D3E92C981F7C00D18DC7 /* View */,
 				4828D3EA2C981F8300D18DC7 /* ViewModel */,
+				4872E3792CA456DB0036B22F /* ViewNavigation */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -364,6 +369,15 @@
 				4828D4252C9B0FDC00D18DC7 /* PostsViewModelTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		4872E3792CA456DB0036B22F /* ViewNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				4872E37A2CA457400036B22F /* LoginViewRouter.swift */,
+				4872E37C2CA459690036B22F /* PostsViewRouter.swift */,
+			);
+			path = ViewNavigation;
 			sourceTree = "<group>";
 		};
 		48976B2B2CA2959E003CD259 /* Extensions */ = {
@@ -726,8 +740,10 @@
 				4828D3F02C98216E00D18DC7 /* AppEnvironment.swift in Sources */,
 				4828D3F62C9872D200D18DC7 /* PostsRemoteRepo.swift in Sources */,
 				4828D41B2C9A0A6C00D18DC7 /* APIClientMock.swift in Sources */,
+				4872E37D2CA459690036B22F /* PostsViewRouter.swift in Sources */,
 				48976B282CA29501003CD259 /* UserModel.swift in Sources */,
 				48976B2F2CA29673003CD259 /* LoginViewController.swift in Sources */,
+				4872E37B2CA457400036B22F /* LoginViewRouter.swift in Sources */,
 				48FE84822C920EC100D6D34D /* AppDelegate.swift in Sources */,
 				48F97FA62CA326A1000E3368 /* FavoritesViewModel.swift in Sources */,
 				4828D3E32C92C61500D18DC7 /* APIClient.swift in Sources */,

@@ -9,7 +9,7 @@
  
 **Functional Description:**
 
-**Login Screen**
+**Login Screen:**
 - Form contains two text fields: one is email and other one is password
 - Email must be valid email address
 - Password size limitation between 8 - 15 characters
@@ -17,16 +17,14 @@
 - On click of Submit button move to next screen without any Remote API Call.
 - Cache the login so no need to login every time with option to logout in Posts View.
  
-Screen2:
-This screen should have two tabs (Post and Favorites).
-The posts tab should have the following behavior:
-The posts tab will display a list of posts from the network.
-The list of posts should be available even if the network is not available.
-On clicking a post, will toggle the post either add or remove from favorite
-The favorites tab should have the following behavior:
-Favorite tabs will list all the posts that have been added to favorites by the user.
-Add action to delete the post from favorite “preferred swipe to delete”
+**Posts:**
+- This screen have two tabs (**Posts** and **Favorites**).
+- The posts tab displays the list of posts from the network.
+- The list of posts are available even if the network is not available.
+- On clicking a post, will toggle the post either add or remove from favorite.
+- **Favorites** tabs lists all the posts that have been added to favorites by the user.
+- *Swipe to delete* action used to delete the post from favorites.
  
-References for API:
-Base Url: https://jsonplaceholder.typicode.com
-Posts: /posts
+**References for API:**
+Base Url: *https://jsonplaceholder.typicode.com*
+Posts: */posts*

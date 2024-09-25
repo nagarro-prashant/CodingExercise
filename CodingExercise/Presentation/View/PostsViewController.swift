@@ -68,7 +68,7 @@ class PostsViewController: UITableViewController {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
-        print("💀💀💀💀 PostsViewController deinitialized")
+        print("💀 PostsViewController deinitialized")
     }
 
 }

@@ -56,6 +56,6 @@ class LoginViewController: UIViewController {
     }
     
     deinit {
-        print("💀💀💀💀 LoginViewController deinitialized")
+        print("💀 LoginViewController deinitialized")
     }
 }

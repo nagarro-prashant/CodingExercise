@@ -11,7 +11,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -19,37 +18,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: scene)
         if UserManager.shared.isLoggedInUser {
-            showTabBarController(with: scene)
+            showTabBarController()
         } else {
-            showLoginScreen(with: scene)
+            showLoginScreen()
         }
     }
     
-    func showTabBarController(with scene: UIWindowScene) {
+    func showTabBarController() {
         print("--- Inside showTabBarController ")
         // Assuming you have a TabBarController set up in the storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let tabBarController = storyboard.instantiateViewController(withIdentifier: "PostsTabbarController") as? UITabBarController  {
             tabBarController.selectedIndex = 0
             if let nav = tabBarController.viewControllers?.first as? UINavigationController, let postsView = nav.topViewController  as? PostsViewController {
-                print("posts NAv")
-                postsView.assignDependencies(viewModel: DependencyManager.postsDI(), router: PostsViewRouter())
+                let postsDI = DependencyManager.postsDI()
+                postsView.assignDependencies(viewModel: postsDI.viewModel, router: postsDI.router)
             }
             if let nav = tabBarController.viewControllers?.last as? UINavigationController, let favView = nav.topViewController  as? FavoritesViewController {
-                print(" fav NAv")
-                favView.assignDependencies(viewModel: DependencyManager.favoritesDI())
+                let favDI = DependencyManager.favoritesDI()
+                favView.assignDependencies(viewModel: favDI.viewModel)
             }
             self.window?.rootViewController = tabBarController
             self.window?.makeKeyAndVisible()
         }
     }
     
-    func showLoginScreen(with scene: UIWindowScene) {
+    func showLoginScreen() {
         print("--- Inside showLoginScreen ")
         // Assuming you have a TabBarController set up in the storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let loginView = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController  {
-            loginView.assignDependencies(viewModel: DependencyManager.loginDI(), router: LoginViewRouter())
+            let dependencies = DependencyManager.loginDI()
+            loginView.assignDependencies(viewModel: dependencies.viewModel, router: dependencies.router)
             self.window?.rootViewController = loginView
             self.window?.makeKeyAndVisible()
         }

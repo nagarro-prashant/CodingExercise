@@ -13,11 +13,13 @@ class LoginViewRouter {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let tabBarController = storyboard.instantiateViewController(withIdentifier: "PostsTabbarController") as? UITabBarController {
             tabBarController.selectedIndex = 0
-            if let nav = tabBarController.viewControllers?.first as? UINavigationController, let postsView = nav.topViewController  as? PostsViewController {
-                postsView.assignDependencies(viewModel: DependencyManager.postsDI(), router: PostsViewRouter())
+            if let nav = tabBarController.viewControllers?.first as? UINavigationController, let postsView = nav.topViewController as? PostsViewController {
+                let postsDI = DependencyManager.postsDI()
+                postsView.assignDependencies(viewModel: postsDI.viewModel, router: postsDI.router)
             }
             if let nav = tabBarController.viewControllers?.last as? UINavigationController, let favView = nav.topViewController  as? FavoritesViewController {
-                favView.assignDependencies(viewModel: DependencyManager.favoritesDI())
+                let favDI = DependencyManager.favoritesDI()
+                favView.assignDependencies(viewModel: favDI.viewModel)
             }
             // Set the new root view controller with an animation
             if let window = UIApplication.shared.keyWindow {
@@ -30,7 +32,7 @@ class LoginViewRouter {
     }
     
     deinit {
-        print("💀💀💀💀 LoginViewRouter deinitialized")
+        print("💀 LoginViewRouter deinitialized")
     }
     
 }

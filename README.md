@@ -1,7 +1,7 @@
 # CodingExercise
 **Specifications**
 -  Language: *Swift*
--  Design pattern: *MVVM*
+-  Design pattern: *Clean-MVVM*
 -  Database: *Realm-Swift*
 -  Networking framework: *Alamofire*
 -  Reactive programming: *RxSwift/Rx-Cocoa*

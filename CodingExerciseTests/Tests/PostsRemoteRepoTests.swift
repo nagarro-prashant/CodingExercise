@@ -36,6 +36,7 @@ final class PostsRemoteRepoTests: XCTestCase {
             .subscribe( onNext: { models in
                 modelsExpectation.fulfill()
                 print(models.count)
+                XCTAssertEqual(models.count, 20, "Number of posts should be 20")
             }).disposed(by: self.bag)
         waitForExpectations(timeout: 5)
     }

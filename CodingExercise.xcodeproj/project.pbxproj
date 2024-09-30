@@ -26,7 +26,7 @@
 		4828D41D2C9AC57B00D18DC7 /* StubLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828D4132C99F8CF00D18DC7 /* StubLoader.swift */; };
 		4828D4222C9ACAE100D18DC7 /* StubLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828D4132C99F8CF00D18DC7 /* StubLoader.swift */; };
 		4828D4242C9ADC8000D18DC7 /* DatabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828D4232C9ADC8000D18DC7 /* DatabaseClient.swift */; };
-		4828D4262C9B0FDC00D18DC7 /* PostsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828D4252C9B0FDC00D18DC7 /* PostsViewModelTests.swift */; };
+		4828D4262C9B0FDC00D18DC7 /* PostsRemoteRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828D4252C9B0FDC00D18DC7 /* PostsRemoteRepoTests.swift */; };
 		4828D4282C9B25E700D18DC7 /* Posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 4828D4102C99F67700D18DC7 /* Posts.json */; };
 		48384A6D2CA30DF30057148A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE84872C920EC100D6D34D /* Main.storyboard */; };
 		486D1FC44550B2BADEB3DF6B /* Pods_CodingExercise_CodingExerciseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943AD3A1442F8895375A788D /* Pods_CodingExercise_CodingExerciseUITests.framework */; };
@@ -94,7 +94,7 @@
 		4828D4132C99F8CF00D18DC7 /* StubLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLoader.swift; sourceTree = "<group>"; };
 		4828D41A2C9A0A6C00D18DC7 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		4828D4232C9ADC8000D18DC7 /* DatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseClient.swift; sourceTree = "<group>"; };
-		4828D4252C9B0FDC00D18DC7 /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
+		4828D4252C9B0FDC00D18DC7 /* PostsRemoteRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRemoteRepoTests.swift; sourceTree = "<group>"; };
 		4872E37A2CA457400036B22F /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
 		4872E37C2CA459690036B22F /* PostsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewRouter.swift; sourceTree = "<group>"; };
 		4872E3802CA472810036B22F /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -369,7 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				48FE84982C920ECC00D6D34D /* CodingExerciseTests.swift */,
-				4828D4252C9B0FDC00D18DC7 /* PostsViewModelTests.swift */,
+				4828D4252C9B0FDC00D18DC7 /* PostsRemoteRepoTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -772,7 +772,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4828D4262C9B0FDC00D18DC7 /* PostsViewModelTests.swift in Sources */,
+				4828D4262C9B0FDC00D18DC7 /* PostsRemoteRepoTests.swift in Sources */,
 				4828D41D2C9AC57B00D18DC7 /* StubLoader.swift in Sources */,
 				48FE84992C920ECC00D6D34D /* CodingExerciseTests.swift in Sources */,
 			);

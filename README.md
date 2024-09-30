@@ -17,7 +17,7 @@
 - On click of `Submit` button move to next screen without any Remote API Call.
 - Cache the login so no need to login every time with option to logout in Posts View.
  
-**Posts:**
+**Posts & Favorites tab:**
 - This screen have two tabs: **Posts** and **Favorites**.
 - The `Posts` tab displays the list of posts from the network.
 - The list of posts are available even if the network is not available.

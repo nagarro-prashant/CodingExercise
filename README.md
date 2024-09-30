@@ -4,7 +4,7 @@
 -  Design pattern: *Clean-MVVM*
 -  Database: *Realm-Swift*
 -  Networking framework: *Alamofire*
--  Reactive programming: *RxSwift/Rx-Cocoa*
+-  Reactive framework: *RxSwift/Rx-Cocoa*
  
  
 **Functional Description:**

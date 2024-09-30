@@ -19,7 +19,7 @@
  
 **Posts screen:**
 - This screen have two tabs: **Posts** and **Favorites**.
-- The `**Posts**` tab displays the list of posts from the network.
+- The **`Posts`** tab displays the list of posts from the network.
 - The list of posts are available even if the network is not available.
 - On clicking a post, will toggle the post either add or remove from favorite.
 - `Favorites` tab lists all the posts that have been added to favorites by the user.

@@ -22,7 +22,7 @@
 - The `Posts` tab displays the list of posts from the network.
 - The list of posts are available even if the network is not available.
 - On clicking a post, will toggle the post either add or remove from favorite.
-- **Favorites** tabs lists all the posts that have been added to favorites by the user.
+- `Favorites` tabs lists all the posts that have been added to favorites by the user.
 - *Swipe to delete* action used to delete the post from favorites.
  
 **References for API:**

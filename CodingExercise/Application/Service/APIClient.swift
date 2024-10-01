@@ -32,7 +32,7 @@ public class APIClient: APIClientInterface {
                         observer.onNext(result)
                         observer.onCompleted()
                     case .failure(let error):
-                        observer.onError(error)
+                        observer.onError(NetworkError(statusCode: error.responseCode ?? -1))
                     }
                 }
             // Return a disposable

@@ -23,12 +23,13 @@ class PostsViewModel {
     }
     
      func setupBindings() {
-        /*usecase.fetch()
-            .observe(on: MainScheduler.instance)
-            .bind(to: self.posts)
-            .disposed(by: self.bag)*/
          postsUsecase.fetch()
              .observe(on: MainScheduler.instance)
+             .do (onError: { error in
+                 // Show error text
+                 let errorText = (error as? NetworkError)?.errorDescription ?? error.localizedDescription
+                 print("❌ ❌ Error occured:: \(errorText)")
+             })
              .subscribe(onNext: { [weak self] posts in
                  self?.posts.accept(posts)
              })
